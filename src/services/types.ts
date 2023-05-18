@@ -1,4 +1,4 @@
-export type VtsTheme = 'default' | 'dark'
+export type VtsTheme = 'default' | 'dark' | 'success' | 'warning' | 'danger' | 'info'
 
 export type VtsThemeItem = { theme: VtsTheme, url: string }
 

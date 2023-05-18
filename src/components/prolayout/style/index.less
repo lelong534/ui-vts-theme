@@ -70,6 +70,7 @@
 
     .username, .subname {
       line-height: 20.8px;
+      color: @prolayout-header-color;
     }
 
     .username {
@@ -94,15 +95,18 @@
     .title-container {
       display: flex;
       padding-left: 16px;      
+      color: @prolayout-text-color;
     }
 
     .icon-utils-container {
-      padding-right: 20px;
+      padding-right: 20px;     
+      color: @prolayout-text-color;
     }
 
     .icons-utils {
       padding-left: 5px;
-      padding-right: 5px;
+      padding-right: 5px;     
+      color: @prolayout-text-color;
     }
 
     .notification-icon {
@@ -114,7 +118,7 @@
 
     i {
       font-size: 18px;
-      color: #44494D;
+      color: @prolayout-header-color;
     }
 
     .vts-badge-multiple-words {
@@ -126,7 +130,7 @@
     }
 
     .logo-fixed-header {
-      background-color: #192E35;
+      background-color: @prolayout-header-background;
     }
 
     .avatar-user {
@@ -149,10 +153,39 @@
     flex: auto;
     /* fix firefox can't set height smaller than content on flex item */
     min-height: 0;
-    background-color: #F0F0F0;
+    background-color: @prolayout-content-background;
     .breadcrumb-container {
       padding: 12px;
     }
+    
+    .vts-card, .vts-table tr th, .vts-table tr td {
+      color: @prolayout-text-color;
+      background-color: @prolayout-card-background;
+	  border-color: @prolayout-card-background;
+    }
+	
+	.vts-table {
+		.vts-table-head th.vts-table-column-has-sorters:hover, 
+		.vts-table-tbody>tr.vts-table-row-even:hover>td, 
+		.vts-table-tbody>tr.vts-table-row-odd:hover>td, 
+		.vts-table.vts-table-stripe .vts-table-tbody>tr.vts-table-row-odd,
+		.vts-table-thead th.vts-table-column-has-sorters:hover		{
+			background: @prolayout-hover-background;
+			color: @prolayout-text-color;
+		}
+		
+		.vts-table-tbody>tr>td {
+			border-bottom: 1px solid @prolayout-row-border-color
+		}
+		
+		.vts-table-thead>tr>th {
+			border-bottom: 2px solid @prolayout-row-border-color
+		}
+	}
+	
+	.vts-breadcrumb-link, .vts-breadcrumb-overlay-link {
+		color: @prolayout-text-color;
+	}
   }
 
   &-sider {
@@ -226,7 +259,7 @@
         }
         
         &:hover::after {
-          background: rgba(255, 255, 255, 0.1);
+          background: @prolayout-sider-item-hover;
         }
         
         &-right {
@@ -238,6 +271,27 @@
       
     .vts-menu-submenu-arrow {
       right: 4px
+    }
+
+    // this will override style for vts-menu
+    ul.vts-menu.sider-menu {
+      background-color: @prolayout-sider-background;
+      .vts-menu-submenu-title {
+        color: @prolayout-text-color;
+        font-weight: @prolayout-sider-font-weight;
+        &:hover {
+          background-color: @prolayout-sider-item-hover;
+          color: @prolayout-text-color;
+        }
+      }
+      .vts-menu-item {
+        color: @prolayout-text-color;
+        font-weight: @prolayout-sider-font-weight;
+        &:hover {
+          background-color: @prolayout-sider-item-hover;
+          color: @prolayout-text-color;
+        }
+      }
     }
   }
 }
