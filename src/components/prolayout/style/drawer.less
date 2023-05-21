@@ -41,3 +41,61 @@
             opacity: 1;
       }
 }
+
+@drawer-prefix-cls: ~'@{vts-prefix}-drawer';
+
+.@{drawer-prefix-cls} {
+      &-content {
+            background-color: @drawer-bg;
+            color: @prolayout-text-color;
+
+            .vts-form {
+                  vts-input-group.vts-input-affix-wrapper, 
+                  input.vts-input, 
+                  input.vts-input:focus, 
+                  textarea.vts-input, 
+                  textarea.vts-input:focus {
+                        background-color: @prolayout-input-background;
+                  }
+                  
+                  input.vts-input, 
+                  input.vts-input:focus, 
+                  textarea.vts-input, 
+                  textarea.vts-input:focus {
+                        color: @prolayout-text-color;
+                  }      
+            }
+
+            vts-input-group.vts-input-affix-wrapper, 
+            input.vts-input, 
+            input.vts-input:focus, 
+            textarea.vts-input, 
+            textarea.vts-input:focus {
+                  background-color: @prolayout-input-background;
+            }
+            
+            input.vts-input, 
+            input.vts-input:focus, 
+            textarea.vts-input, 
+            textarea.vts-input:focus {
+                  color: @prolayout-text-color;
+            }
+
+            .vts-form-item-has-error .vts-form-item-control .vts-input, 
+            .vts-form-item-has-error .vts-form-item-control .vts-input-affix-wrapper, 
+            .vts-form-item-has-error .vts-form-item-control .vts-input-affix-wrapper:hover, 
+            .vts-form-item-has-error .vts-form-item-control .vts-input:hover {
+                  border-color: #E03;
+            }
+
+            .vts-form-item-label>label.vts-form-item-required:not(.vts-form-item-required-mark-optional)::after,
+            .vts-form-item-control .vts-typo-color-error {
+                  color: #E03;
+            }
+      }
+
+      &-title {
+            background-color: @drawer-bg;
+            color: @prolayout-text-color;
+      }
+}

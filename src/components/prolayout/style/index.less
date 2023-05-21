@@ -186,6 +186,39 @@
 	.vts-breadcrumb-link, .vts-breadcrumb-overlay-link {
 		color: @prolayout-text-color;
 	}
+			
+	vts-input-group.vts-input-affix-wrapper, input.vts-input, input.vts-input:focus {
+		background-color: @prolayout-input-background;
+	}
+	
+	input.vts-input, input.vts-input:focus {
+		color: @prolayout-text-color;
+	}
+	
+	&-dark {
+		button.vts-btn:not(.vts-btn-icon-only) {
+			color: @prolayout-btn-text;
+			&:enabled {
+				background-color: @prolayout-btn-enabled;
+			}
+			
+			&:hover {
+				background-color: @prolayout-btn-hover;
+			}
+			
+			&:focus {
+				background-color: @prolayout-btn-focus;
+			}
+			
+			&:active {
+				background-color: @prolayout-btn-active;
+			}
+			
+			&:disabled {
+				background-color: @prolayout-btn-disabled;
+			}
+		}
+	}	
   }
 
   &-sider {
